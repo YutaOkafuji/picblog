@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
 
+    before_action :move_to_index, except: :index
   def index
     @blog = Blog.page(params[:page]).per(5).order("created_at DESC")
   end
@@ -18,6 +19,10 @@ class BlogsController < ApplicationController
 
   def blog_params
     params.permit(:title,:image,:column,:user_id)
+  end
+
+  def move_to_index
+    redirect_to action: :index
   end
 
 end
