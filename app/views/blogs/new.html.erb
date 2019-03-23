@@ -1,8 +1,11 @@
 
 <%= form_tag('/blogs',method: :post) do %>
 
+<label>title</label>
 <input type="text" name="title">
+<label>image</label>
 <input type="text" name="image">
+<label>本文</label>
 <textarea name="column"></textarea>
 <input type="submit">
 <% end %>

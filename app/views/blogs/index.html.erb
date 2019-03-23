@@ -9,6 +9,5 @@
 
 <%= @blog.each do |blog| %>
 
-<p><%= blog.title %></p>
-
+<%= link_to "#{blog.title}",'/blogs/#{@blog.id}',class: 'get' %>
 <% end %>

@@ -12,6 +12,10 @@ class BlogsController < ApplicationController
     Blog.create(title: blog_params[:title],image: blog_params[:image],column: blog_params[:column])
   end
 
+   def show
+    @blog = Blog.find(params[:id])
+   end
+
   def destroy
   end
 
