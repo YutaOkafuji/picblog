@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
   end
 
    def show
-    @blog = Blog.find(params[:id])
+    @blog = select_blogs_data
    end
 
   def destroy
@@ -26,7 +26,10 @@ class BlogsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index
+    redirect_to action: :index unless user_signed_in?
   end
 
+  def select_blogs_data
+    Blog.find(params[:id])
+  end
 end
