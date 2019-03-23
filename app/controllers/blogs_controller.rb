@@ -25,6 +25,11 @@ class BlogsController < ApplicationController
     @blog = select_blogs_data
   end
 
+  def update
+    @blog = select_blogs_data
+    @blog.update(blog_params) if @blog.user_id == current_user.id
+  end
+
   private
 
   def blog_params
