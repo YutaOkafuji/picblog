@@ -17,6 +17,8 @@ class BlogsController < ApplicationController
    end
 
   def destroy
+    @blog = select_blogs_data
+    @blog.destroy if @blog.user_id == current_user.id
   end
 
   private
