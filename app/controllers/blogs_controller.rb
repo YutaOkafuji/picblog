@@ -21,6 +21,10 @@ class BlogsController < ApplicationController
     @blog.destroy if @blog.user_id == current_user.id
   end
 
+  def edit
+    @blog = select_blogs_data
+  end
+
   private
 
   def blog_params
