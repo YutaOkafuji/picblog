@@ -2,14 +2,14 @@ class BlogsController < ApplicationController
 
     before_action :move_to_index, except: :index
   def index
-    @blog = Blog.page(params[:page]).per(5).order("created_at DESC")
+    @blog = Blog.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new
   end
 
   def create
-    Blog.create(title: blog_params[:title],image: blog_params[:image],column: blog_params[:column])
+    Blog.create(title: blog_params[:title],image: blog_params[:image],column: blog_params[:column],user_id: current_user.id)
   end
 
    def show
@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.permit(:title,:image,:column,:user_id)
+    params.permit(:title,:image,:column)
   end
 
   def move_to_index
