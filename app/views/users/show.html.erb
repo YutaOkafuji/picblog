@@ -1,5 +1,22 @@
 
-<% @blog.each do |blog|%>
-  <p><%= blog.title %></p>
-<% end %>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+    <div>
+      <% @blog.each do |blog|%>
+        <p><%= blog.title %></p>
+      <% end %>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+
 

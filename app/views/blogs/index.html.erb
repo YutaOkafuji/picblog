@@ -1,13 +1,30 @@
-<% if user_signed_in? %>
-    <%= link_to "ログアウト",destroy_user_session_path,method: 'delete' %>
-    <%= link_to "#{current_user.nickname}","/users/#{current_user.id}",class: 'get' %>
-<% else %>
-    <%= link_to "ログイン",new_user_session_path,class: 'post' %>
-    <%= link_to "新規登録",new_user_registration_path,class: 'post' %>
-<% end %>
 
-<%= @blog.each do |blog| %>
-    <p><%= link_to "#{blog.title}","/blogs/#{blog.id}",class: 'get' %><p>
-<% end %>
+<main role="main">
 
-<%= paginate(@blog) %>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">picblog</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <% @blog.each do |blog| %>
+    <div class="row">
+      <div class="col-md-4">
+        <h2><%= blog.title %></h2>
+        <p><%= blog.column %></p>
+        <p><a class="btn btn-secondary" href="/blogs/show/<% @blog.id %>" role="button">View details »</a></p>
+      </div>
+    <% end %>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
