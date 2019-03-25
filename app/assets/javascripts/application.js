@@ -14,4 +14,8 @@
 //= require activestorage
 
 
-
+$(function(){
+  $("h2").click(funcrion(){
+    $(this).css('color','red');
+  });
+});

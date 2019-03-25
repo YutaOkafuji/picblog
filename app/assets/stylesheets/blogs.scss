@@ -3,5 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jumbotron{
-  background-image:url("/assets/images/森林のコピー.jpg")center no-repeat; background-size:cover;
+  background-image:url("/assets/images/森林のコピー.jpg");
+}
+
+.create-btn{
+  background-color:blue;
+  height:60px;
+  width:60px;
+  position:fixed;
+  border-radius:30px;
+}
+
+.col-md-4{
+
 }
