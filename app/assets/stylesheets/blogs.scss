@@ -1,19 +1,84 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.jumbotron{
-  background-image:url("/assets/images/森林のコピー.jpg");
+.blog-content{
+  width:1200px;
+  height:1200px;
+  margin:0 auto;
+  z-index:1;
 }
 
-.create-btn{
-  background-color:blue;
-  height:60px;
-  width:60px;
+.blog-content__left{
+  width:200px;
+  display:inline-block;
+  float:left;
   position:fixed;
+}
+
+.blog-content__left-btn{
+  display:block;
+  width:60px;
+  height:60px;
   border-radius:30px;
+  background-color:#fd9535;
+  padding:0.25em 0.5em;
+  text-decoration:none;
+  color:#FFF;
+  border-bottom: solid 2px #d27d00;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),0 2px 2px rgba(0,0,0,0.19);
+  font-weight:bold;
+  text-align:center;
+  line-height:50px;
+  margin:0 auto;
+  margin-top:50px;
 }
 
-.col-md-4{
-
+.blog-content__left-btn:active{
+  border-bottom:solid 2px #fd9535;
+  box-shadow:0 0 2px rgba(0,0,0,0.30);
+  text-decoration:none;
 }
+
+.blog-content__right{
+  width:1000px;
+  height:1200px;
+  display:inline-block;
+  float:right;
+}
+
+.blog-content__user{
+  width:600px;
+  height:150px;
+  position:relative;
+}
+
+.blog-content__user__image{
+  width:80px;
+  height:80px;
+  border-radius:10px;
+  background-color:gray;
+  display:inline-block;
+  position:absolute;
+  top:35px;
+  left:20px;
+}
+
+.blog-content__user h3{
+  display:inline-block;
+  line-height:150px;
+  position:absolute;
+  left:120px;
+}
+
+.blog-content__main{
+  width:1000px;
+}
+
+.blog-content__main__title{
+  width:900px;
+  height:200px;
+  border-bottom: solid 2px gray;
+  margin:0 auto;
+  padding-top:20px;
+}
+
