@@ -1,2 +1,23 @@
-
-
+<div class="mypage">
+  <div class="profile-content">
+    <div class="profile-image">
+      <a href= "<%= edit_user_registration_path %>" class="profile-info__edit-btn">edit</a>
+      <div class="profile-info__name-id">
+        <h3><%= current_user.nickname %></h3>
+      </div>
+    </div>
+    <div class="profile-info">
+      <div class="profile-introduction">
+        <h5>-introduction-<h5>
+        <p><%= current_user.introduction %></p>
+      </div>
+    </div>
+  </div>
+  <div class="right-content">
+    <h5>投稿一覧</h5>
+    <% @blog.each do |blog| %>
+        <a href="/blogs/<%= blog.id %>"class="my-blogs"><%= blog.title %></a>
+    <% end %>
+    <%= paginate(@blog) %>
+  </div>
+</div>

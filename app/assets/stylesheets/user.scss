@@ -1,3 +1,81 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.mypage{
+  width:1200px;
+  margin:0 auto;
+}
+
+.profile-content{
+  margin-top:20px;
+  display:inline-block;
+  width:300px;
+  height:470px;
+  position:fixed;
+}
+
+.profile-image{
+  width:300px;
+  height:300px;
+  background-color:gray;
+  position:relative;
+}
+
+.profile-info__name-id{
+  width:200px;
+  height:60px;
+  position:absolute;
+  top:230px;
+  left:80px;
+}
+
+.profile-info__edit-btn{
+  display:inline-block;
+  width:60px;
+  height:60px;
+  border-radius:30px;
+  background-color:#fd9535;
+  position:absolute;
+  top:230px;
+  left:10px;
+  padding:0.25em 0.5em;
+  text-decoration:none;
+  color:#FFF;
+  border-bottom: solid 2px #d27d00;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),0 2px 2px rgba(0,0,0,0.19);
+  font-weight:bold;
+  text-align:center;
+  line-height:50px;
+}
+
+.profile-info__edit-btn:active{
+  border-bottom:solid 2px #fd9535;
+  box-shadow:0 0 2px rgba(0,0,0,0.30);
+  text-decoration:none;
+}
+
+.profile-introduction{
+  width:300px;
+  height:170px;
+  border-bottom: solid 1px #d27d00;
+}
+
+.right-content{
+  margin:20px 0 0 350px;
+  display:inline-block;
+  width:810px;
+}
+
+.my-blogs{
+  display:block;
+  width:800px;
+  height:60px;
+  border-bottom: solid 1px #d27d00;
+  font-size:25px;
+  line-height:60px;
+  text-decoration:none;
+}
+
+.my-blogs:hover{
+  background-color:gray;
+}
