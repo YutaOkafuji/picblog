@@ -82,3 +82,25 @@
   padding-top:20px;
 }
 
+input[id=title]{
+  width:600px;
+}
+
+.blog-form{
+  display:inline-block;
+  margin-left:50px;
+}
+
+.column-preview{
+  display:inline-block;
+  border: solid 2px gray;
+  width:600px;
+  height:600px;
+  margin:100px 0  0 30px;
+  position:fixed;
+}
+
+.column-preview__is_active{
+  width:600px;
+  height:600px;
+}
