@@ -12,12 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require_tree .
+//*= require_self
 
-
-
-
-$(function(){
-  $('display-3').on("click",function(){
-    $(this).css('color','green');
-  });
-})
