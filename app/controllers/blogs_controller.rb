@@ -6,10 +6,11 @@ class BlogsController < ApplicationController
   end
 
   def new
+    @blog = Blog.new
   end
 
   def create
-    Blog.create(title: blog_params[:title],image: blog_params[:image],column: blog_params[:column],user_id: current_user.id)
+    Blog.create(title: blog_params[:title],image: blog_params[:image],column: blog_params[:column],user_id: current_user.id,remove_image: blog_params[:remove_image])
   end
 
    def show
@@ -33,7 +34,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.permit(:title,:image,:column)
+    params.require(:blog).permit(:title,:image,:column,:remove_image)
   end
 
   def move_to_index

@@ -1,10 +1,30 @@
-<%= form_tag("/blogs/#{@blog.id}",method: :patch) do %>
+<div class="blog-form">
+  <%= form_for(@blog) do |f| %>
+    <div>
+      <div>
+        <%= f.label :title %>
+      </div>
+      <%= f.text_field :title,id: :title%>
+    </div>
 
-  <label>title</label>
-  <input type="text" name="title" value="<%= @blog.image %>">
-  <label>image</label>
-  <input type="text" name="image" value="<%= @blog.column %>">
-  <label>本文</label>
-  <textarea name="column"><%= @blog.column %></textarea>
-  <input type="submit">
-<% end %>
+    <div>
+      <div>
+        <%= f.label :image %>
+      </div>
+      <%= f.file_field :image, id: :image %>
+    </div>
+    <p><%= f.check_box :remove_image %>画像を削除する</p>
+
+    <div>
+      <div>
+        <%= f.label :column %>
+      </div>
+      <%= f.text_area :column,id: :column,rows: 20,cols: 75 %>
+    </div>
+
+  <div><%= f.submit "投稿" %></div>
+  <% end %>
+</div>
+<div class = "column-preview">
+  <div class = "column-preview__is_active"></div>
+</div>
