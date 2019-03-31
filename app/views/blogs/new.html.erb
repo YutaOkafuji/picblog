@@ -15,19 +15,31 @@
   </div>
   <p><%= f.check_box :remove_image %>画像を削除する</p>
 
-  <div>
+<div>
     <div>
       <%= f.label :column %>
     </div>
-    <%= f.text_area :column,id: :column,rows: 20,cols: 75 %>
-  </div>
+    <div class = "column-preview">
+      <%= f.text_area :column,id: :column,rows: 20,cols: 60, "v-model": "input" ,html: {class: "column-form"} %>
+      <div class = "column-preview__is_active" v-html='input | marked'></div>
+    </div>
+</div>
 
 <div><%= f.submit "投稿" %></div>
 <% end %>
-</div>
-<div class = "column-preview">
-  <div class = "column-preview__is_active"></div>
-</div>
 
 
 
+<script type="text/javascript">
+ window.onload = function() {
+ new Vue({
+ el: '.column-preview',
+ data: {
+ input: '<%== j @blog.column %>',
+ },
+ filters: {
+ marked: marked,
+ },
+ });
+ };
+</script>

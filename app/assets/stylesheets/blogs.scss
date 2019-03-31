@@ -111,15 +111,17 @@ input[id=title]{
 }
 
 .column-preview{
+}
+
+.column-form{
   display:inline-block;
-  border: solid 2px gray;
-  width:600px;
-  height:600px;
-  margin:100px 0  0 30px;
-  position:fixed;
 }
 
 .column-preview__is_active{
-  width:600px;
-  height:600px;
+  height:480px;
+  width:800px;
+  margin-left:30px;
+  border: solid 1px gray;
+  display:inline-block;
+  overflow:scroll;
 }
