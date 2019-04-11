@@ -1,10 +1,11 @@
 <div class="mypage">
   <div class="profile-content">
     <div class="profile-image">
-      <a href= "<%= edit_user_registration_path %>" class="profile-info__edit-btn">edit</a>
-      <div class="profile-info__name-id">
-        <h3><%= current_user.nickname %></h3>
-      </div>
+      <img src="<%= current_user.user_image %>" class="profile-image">
+    </div>
+    <a href= "<%= edit_user_registration_path %>" class="profile-info__edit-btn">edit</a>
+    <div class="profile-info__name-id">
+      <h3><%= current_user.nickname %></h3>
     </div>
     <div class="profile-info">
       <div class="profile-introduction">
@@ -16,7 +17,7 @@
   <div class="right-content">
     <h5>投稿一覧</h5>
     <% @blog.each do |blog| %>
-        <a href="/blogs/<%= blog.id %>"class="my-blogs"><%= blog.title %></a>
+        <a href="/blogs/<%= blog.id %>" class="my-blogs"><%= blog.title %></a>
     <% end %>
     <%= paginate(@blog) %>
   </div>

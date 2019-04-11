@@ -28,7 +28,7 @@
   background-color:rgba(117,117,117,0.5);
   padding:0.25em 0.5em;
   text-decoration:none;
-  color:#FFF;
+  color:#FFFFFF;
   border-bottom: solid 2px rgba(117,117,117,0.8);
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),0 2px 2px rgba(0,0,0,0.19);
   font-weight:bold;
@@ -37,11 +37,15 @@
   margin:0 auto;
   margin-top:50px;
 }
+.blog-content__left-btn-el{
+  color:#FFFFFF;
+}
 
 .blog-content__left-btn:active{
   border-bottom:solid 2px rgba(117,117,117,0.5);
   box-shadow:0 0 2px rgba(0,0,0,0.30);
   text-decoration:none;
+  color:#FFFFFF;
 }
 
 .blog-content__right{

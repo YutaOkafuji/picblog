@@ -15,6 +15,7 @@
             <%= render partial: "blog",locals:{blog: blog} %>
         <% end %>
        </div>
+       <%= paginate(@blog) %>
     </div>
 </div>
     <hr>
